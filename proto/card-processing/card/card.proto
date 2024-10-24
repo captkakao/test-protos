@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package card;
+
+option go_package = "card-processing.card.v1;cardv1";
+
+import "google/protobuf/any.proto";
+
+service Card {
+  rpc BalanceByPan (BalanceRequest) returns (BalanceResponse);
+}
+
+message BalanceRequest {
+  string card_number = 1;
+  string card_month = 2;
+  string card_year = 3;
+}
+
+message Money {
+  map<string, double> available = 1;
+  map<string, double> balance = 2;
+  map<string, double> balance_in_usd = 3;
+  double total_in_usd = 4;
+}
+
+message Client {
+  string trader_systems_id = 1;
+  string full_name = 2;
+}
+
+message BalanceResponse {
+  Money money = 1;
+  google.protobuf.Any result = 2;
+  Client client = 3;
+  string error = 4;
+  int32 code = 5;
+  string err_msg = 6;
+}
