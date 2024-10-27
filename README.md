@@ -9,10 +9,10 @@ After fulfilling proto files for specified PROJECT_NAME execute make proto-gener
 
 To generate Go code from proto files, run:
 ```bash
-make proto-generate PROJECT_NAME=card-processing GO_VERSION=v1.20
+make proto-generate PROJECT_NAME=card-processing GO_VERSION=v1_20
 ```
 
 To remove generated go files, run :
 ```bash
-make clean PROJECT_NAME=card-processing GO_VERSION=v1.20
+make clean PROJECT_NAME=card-processing GO_VERSION=v1_20
 ```

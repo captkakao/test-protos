@@ -1,8 +1,8 @@
 # Directory where all .proto project directories are located
 PROTO_BASE_DIR = proto
 
-# Go version (default to v1.20 if not specified)
-GO_VERSION ?= v1.20
+# Go version (default to v1_20 if not specified)
+GO_VERSION ?= v1_20
 
 # Project name (default to an empty string if not specified)
 PROJECT_NAME ?=
